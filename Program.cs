@@ -30,7 +30,7 @@ namespace ReviewWindows
             var handle = GetConsoleWindow();
 
             // Hide
-           // ShowWindow(handle, SW_HIDE);
+            ShowWindow(handle, SW_HIDE);
 
             for (;;)
             {
@@ -59,10 +59,7 @@ namespace ReviewWindows
             }
 
 
-            //ProcessStartInfo startInfo = new ProcessStartInfo("mstsc.exe");
-            // startInfo.WindowStyle
-
-            //Process[] processes442 = Process.GetProcesses();
+          
             string log = string.Empty;
             string newFileName = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + "\\Logs\\client_Review" + DateTime.Now.Day + "-" + DateTime.Now.Month + "-" + DateTime.Now.Year + ".csv";
             foreach (Process p in processes)
